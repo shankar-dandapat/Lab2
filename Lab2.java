@@ -18,7 +18,7 @@ public class Lab2 {
 
 	boolean manGoingToStIves = true;
 
-	short numWives = 8;
+	short numWives = 7;
 
 	int numSacksPerWife =  7;
 
@@ -38,8 +38,17 @@ public class Lab2 {
 	    // all of the wives, sacks, cats, and kittens are as well, along
 	    // with the narrator.
 	    // Calculate the number going to St. Ives
-	    total = numWives + numSacksPerWife + numCatsPerSack + numKitsPerCat;
+
+      int totalSacks = numWives * numSacksPerWife;
+
+      int totalCats = totalSacks * numCatsPerSack;
+
+      int totalKits = totalCats * numKitsPerCat;
+
+
+	    total = 1 + totalSacks + totalCats + totalKits + numWives;
 	} else {
+
 	    // Otherwise, only the narrator is going!
 	    total = 1;
 	}
